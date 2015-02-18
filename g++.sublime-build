@@ -1,0 +1,16 @@
+  {
+    "cmd": ["g++","-Wall", "${file}"],
+    "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+    "working_dir": "${file_path}",
+    "selector": "source.c, source.c++",
+    "path":"[[[path/to/your/compiler]]]",
+
+    "variants":
+    [
+    {
+      "name": "Run",
+      "cmd": ["${file_path}\\run.exe"],
+      "shell": true
+    }
+    ]
+  } 
